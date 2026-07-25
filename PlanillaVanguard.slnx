@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../formularios/formularios.csproj" />
+  <Project Path="../GestorDatos/GestorDatos.csproj" />
+  <Project Path="../Logica/Logica.csproj" />
+</Solution>

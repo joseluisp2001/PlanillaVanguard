@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sotspart</string>
+    <string name="unlock_hint">🔒\nMantén presionado\npara desbloquear</string>
+</resources>

@@ -187,7 +187,7 @@ class MainActivity : Activity() {
                 )
                 fullscreenContainer.visibility = View.VISIBLE
                 web.visibility = View.INVISIBLE
-                setImmersive(true)
+                setSystemBarsHidden(true)
                 if (!rotationLocked) {
                     requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
                 }
@@ -580,11 +580,11 @@ class MainActivity : Activity() {
     }
 
     private fun applyImmersive() {
-        setImmersive(customView != null || prefs.getBoolean(KEY_IMMERSIVE, false))
+        setSystemBarsHidden(customView != null || prefs.getBoolean(KEY_IMMERSIVE, false))
     }
 
     @Suppress("DEPRECATION")
-    private fun setImmersive(on: Boolean) {
+    private fun setSystemBarsHidden(on: Boolean) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             window.setDecorFitsSystemWindows(!on)
             val c = window.insetsController ?: return
